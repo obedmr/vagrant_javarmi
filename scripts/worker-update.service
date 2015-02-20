@@ -1,0 +1,7 @@
+[Unit]
+Description=MyScript
+
+[Service]
+Type=simple
+User=vagrant
+ExecStart=/vagrant/scripts/worker_update.sh
