@@ -15,20 +15,41 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   # End RMI Server
 
-  # RMI Clients
-  # Client 1
-  config.vm.define "rmiclient1" do |client_config|
-    client_config.vm.hostname = "rmiclient1"
-    client_config.vm.provision "shell", path: "scripts/client.sh"
-    client_config.vm.network "private_network", ip: "10.0.0.11"
+  # RMI Workers
+  # Worker 1
+  config.vm.define "rmiworker1" do |worker_config|
+    worker_config.vm.hostname = "rmiworker1"
+    worker_config.vm.provision "shell", path: "scripts/worker.sh"
+    worker_config.vm.network "private_network", ip: "10.0.0.11"
   end
 
-  # Client 2
-  config.vm.define "rmiclient2" do |client_config|
-    client_config.vm.hostname = "rmiclient2"
-    client_config.vm.provision "shell", path: "scripts/client.sh"
-    client_config.vm.network "private_network", ip: "10.0.0.12"
+  # Worker 2
+  config.vm.define "rmiworker2" do |worker_config|
+    worker_config.vm.hostname = "rmiworker2"
+    worker_config.vm.provision "shell", path: "scripts/worker.sh"
+    worker_config.vm.network "private_network", ip: "10.0.0.12"
+  end
+
+  # Worker 3
+  config.vm.define "rmiworker3" do |worker_config|
+    worker_config.vm.hostname = "rmiworker3"
+    worker_config.vm.provision "shell", path: "scripts/worker.sh"
+    worker_config.vm.network "private_network", ip: "10.0.0.13"
+  end
+
+  # Worker 4
+  config.vm.define "rmiworker4" do |worker_config|
+    worker_config.vm.hostname = "rmiworker4"
+    worker_config.vm.provision "shell", path: "scripts/worker.sh"
+    worker_config.vm.network "private_network", ip: "10.0.0.14"
+  end
+
+  # Worker 5
+  config.vm.define "rmiworker5" do |worker_config|
+    worker_config.vm.hostname = "rmiworker5"
+    worker_config.vm.provision "shell", path: "scripts/worker.sh"
+    worker_config.vm.network "private_network", ip: "10.0.0.15"
   end
   
-  # End RMI Clients
+  # End RMI Workers
 end
