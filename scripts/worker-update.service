@@ -1,5 +1,5 @@
 [Unit]
-Description=MyScript
+Description=WorkerUpdate
 
 [Service]
 Type=simple
