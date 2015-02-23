@@ -7,7 +7,7 @@ pacman -S --noconfirm git
 pacman -S --noconfirm jdk8-openjdk
 
 # Clone Java RMI Project
-cd /home/vagrant
+cd /vagrant
 git clone https://github.com/VictorRodriguez/distributed_systems.git
 chown vagrant.vagrant -R distributed_systems
 #cd distributed_systems/src
@@ -18,7 +18,7 @@ systemctl daemon-reload
 systemctl enable worker-update.timer
 systemctl start worker-update.timer
 
-# Compile Server
+# mompile Server
 #javac -d ./ example/hello/*.java
 
 # Starting RMI Registry
