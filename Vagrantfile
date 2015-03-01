@@ -12,6 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     server_config.vm.hostname = "rmiserver"
     server_config.vm.provision "shell", path: "scripts/server.sh" 
     server_config.vm.network "private_network", ip: "10.0.0.10"
+    server_config.vm.provider "virtualbox" do |v|
+      v.memory = 4096
+      v.cpus = 4
+    end
   end
   # End RMI Server
 
