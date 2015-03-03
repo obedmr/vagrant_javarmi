@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Utilities
-pacman -S --noconfirm git
+pacman -Syu --noconfirm git
 
 # Install OpenJDK 8
 pacman -S --noconfirm jdk8-openjdk
